@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+/*----------------------
+         1. Global
+----------------------*/
+html {
+    background-color: #f1efea;
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/*----------------------
+         2. Header
+----------------------*/
+div.content {
+    width: 80%;
+}
+div.nav {
+    margin-top: 5%;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.nav div.logo-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.nav div.logo-nav {
+    font-size: 25px;
+    font-family: 'Satoshi', sans-serif;
+    color: #2E2E2E
+}
+
+div.nav div.logo-nav img {
+    margin-left: 30px;
+    margin-top: 2%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 100px;
+}
+
+div.nav ul.buttons-nav {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+div.nav > ul.buttons-nav a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Inter', sans-serif;
+    color: #8a8585;
+}
+
+p.presentation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    width: 35%;
+    font-size: 25px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/*----------------------
+         3. Work
+----------------------*/
+h2 {
+    margin-top: 4%;
+    font-family: 'Satoshi', sans-serif;
+    font-size: 40px;
+}
+
+div.work {
+    margin-top: 1%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 35px;
+    grid-row-gap: 0px;
+}
+
+div.project {
+    width: 100%;
+    height: 600px;
+}
+
+div.project img {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+div.project h3 {
+    margin-top: 3%;
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    color: #2E2E2E;
+}
+
+div.project p {
+    margin-top: 1%;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #2E2E2E;
+}
+
+/*----------------------
+         4. Contact
+----------------------*/
+
+/*----------------------
+         5. Footer
+----------------------*/
+div.progressbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 1%;
+    background: darkgrey;
+}
+
+div.progressbar span#progressbar-content {
+    border-radius: 0px 30px 30px 0px;
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    transition: 300ms ease-in-out transform;
+    transform-origin: left;
+    background: #2E2E2E;
+}
