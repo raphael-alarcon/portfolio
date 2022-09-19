@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Portfolio</title>
         <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" >
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     </head>
     <body>
         <div class="content">
@@ -19,7 +20,7 @@
             </div>
             <p class="presentation">Hi! I'm a French student in computer science who's always trying to improve himself.</p>
             <h2>Work</h2>
-            <div class="work">
+            <div id="work">
                 <div class="project">
                     <img src="../resources/cpdviewer.png">
                     <h3>CPDViewer</h3>
@@ -28,7 +29,11 @@
                     </p>
                 </div>
                 <div class="project">
-
+                    <img src="../resources/placeholder.png">
+                    <h3>Portfolio</h3>
+                    <p>
+                        This website is a project I'm working on to improve my web development skills.
+                    </p>
                 </div>
                 <div class="project">
                     
@@ -40,6 +45,8 @@
         </div>
     </body>
     <script>
+        
+        // Progress bar
         window.onscroll = function() {myFunction()};
 
         function myFunction() {
@@ -49,5 +56,22 @@
             document.getElementById("progressbar-content").style.width = scrolled + "%";
             if (scrolled >= 99)document.getElementById("progressbar-content").style.width = "101%";
         } 
+
+
+        // Dark mode
+        const options = {
+            time: '0.5s', // default: '0.3s'
+            backgroundColor: '#00000',  // default: '#fff'
+            buttonColorDark: '#252422',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+
+        function addDarkmodeWidget() {
+            new Darkmode(options).showWidget();
+        }
+
+        window.addEventListener('load', addDarkmodeWidget);
     </script>
 </html>
