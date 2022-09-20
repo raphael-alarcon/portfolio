@@ -14,13 +14,14 @@
                     <img src="../resources/pp.png" alt="self-picture">
                 </div>
                 <ul class="buttons-nav">
-                    <li><a href="about.html">Work</a></li>
-                    <li class="current"><a href="portfolio.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
             <p class="presentation">Hi! I'm a French student in computer science who's always trying to improve himself.</p>
-            <h2>Work</h2>
-            <div id="work">
+            <h2 id="work">Work</h2>
+            <div class="work">
                 <div class="project">
                     <img src="../resources/cpdviewer.png">
                     <h3>CPDViewer</h3>
@@ -39,17 +40,38 @@
                     
                 </div>
             </div>
+            <h2 id="resume">Resume</h2>
+            <div class="resume">
+                <a onclick="showResume()">View resume<img src="../resources/icons/pdf.svg" width="25px" height="25px"></a>
+                <iframe id="resume-pdf" src="../resources/documents/CV_ALARCON_Raphael.pdf"></iframe>
+                <a href="../resources/documents/CV_ALARCON_Raphael.pdf" download="CV_Raphael_A">Download resume<img src="../resources/icons/pdf.svg" width="25px" height="25px" style="padding-top: 30px;"></a>
+            </div>
+            <h2 id="contact">Contact</h2>
+            <div class="contact">
+                <h4>raph.alarcon1@gmail.com</h4>
+            </div>
         </div>
         <div class="progressbar">
             <span id="progressbar-content"></span>
         </div>
     </body>
     <script>
+
+        // Show/Hide resume
+        function showResume() {
+            var x = document.getElementById("resume-pdf");
+            if (x.style.display === "none") {
+                x.style.display = "inline";
+            } else {
+                x.style.display = "none";
+            }
+            scrollBar();
+        }
         
         // Progress bar
-        window.onscroll = function() {myFunction()};
+        window.onscroll = function() {scrollBar()};
 
-        function myFunction() {
+        function scrollBar() {
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var scrolled = (winScroll / height) * 100;

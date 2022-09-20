@@ -2,28 +2,33 @@
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-  }
-
 /*----------------------
          1. Global
 ----------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body::-webkit-scrollbar {
+    display: none;
+}
+
 html {
     background-color: #f1efea;
-  }
+}
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color:#2E2E2E;
+}
+
+h2 ~ div {
+    margin-top: 1%;
 }
 
 
@@ -98,12 +103,11 @@ h2 {
     font-size: 40px;
 }
 
-div#work {
-    margin-top: 1%;
+div.work {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 35px;
     grid-row-gap: 0px;
 }
@@ -122,22 +126,68 @@ div.project h3 {
     margin-top: 3%;
     font-size: 25px;
     font-family: 'Poppins', sans-serif;
-    color: #2E2E2E;
 }
 
 div.project p {
     margin-top: 1%;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
-    color: #2E2E2E;
 }
 
-/*----------------------
-         4. Contact
-----------------------*/
 
 /*----------------------
-         5. Footer
+         4. Resume
+----------------------*/
+div.resume {
+    display: flex;
+    flex-direction: column;
+}
+
+div.resume iframe {
+    height: 1200px;
+}
+
+div.resume a {
+    display: inline-block;
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #2E2E2E;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    transform: scale(1);
+    transition: 300ms ease-in-out transform;
+}
+
+div.resume a img {
+    margin-left: 5%;
+    vertical-align: middle;
+}
+
+div.resume a:hover {
+    transform: scale(1.1);
+}
+
+
+/*----------------------
+         5. Contact
+----------------------*/
+div.contact {
+    height: 200px;
+}
+
+div.contact h4 {
+
+}
+
+
+/*----------------------
+         6. Footer
 ----------------------*/
 div.progressbar {
     position: fixed;
@@ -159,5 +209,5 @@ div.progressbar span#progressbar-content {
 
 
 /*----------------------
-         6. Dark Mode
+         7. Dark Mode
 ----------------------*/
