@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 /*----------------------
          1. Global
@@ -16,7 +16,20 @@ body::-webkit-scrollbar {
 }
 
 html {
-    background-color: #f1efea;
+    background: no-repeat center center fixed;
+    background-color:hsla(0,100%,50%,1);
+    background-image:
+        radial-gradient(at 40% 20%, hsla(28,100%,74%,1) 0px, transparent 50%),
+        radial-gradient(at 80% 0%, hsla(189,100%,56%,1) 0px, transparent 50%),
+        radial-gradient(at 0% 50%, hsla(355,100%,93%,1) 0px, transparent 50%),
+        radial-gradient(at 80% 50%, hsla(340,100%,76%,1) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(22,100%,77%,1) 0px, transparent 50%),
+        radial-gradient(at 80% 100%, hsla(242,100%,70%,1) 0px, transparent 50%),
+        radial-gradient(at 0% 0%, hsla(343,100%,76%,1) 0px, transparent 50%);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body {
@@ -24,7 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color:#2E2E2E;
+    color:#FFFFFF;
 }
 
 h2 ~ div {
@@ -35,13 +48,10 @@ h2 ~ div {
 /*----------------------
          2. Header
 ----------------------*/
-div.content {
-    width: 80%;
-}
 div.nav {
     margin-top: 3%;
     height: 15%;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,22 +65,20 @@ div.nav div.logo-nav {
 }
 
 div.nav div.logo-nav {
-    font-size: 25px;
-    font-family: 'Satoshi', sans-serif;
-    color: #2E2E2E
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 109.53%;
+    letter-spacing: 0.05em;
 }
 
-div.nav div.logo-nav img {
-    margin-left: 30px;
-    margin-top: 2%;
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    border-radius: 100px;
+div.nav div.logo-nav h1 > span {
+    color: #EF476F;
 }
 
 div.nav ul.buttons-nav {
-    width: 30%;
+    width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -79,18 +87,64 @@ div.nav ul.buttons-nav {
 
 div.nav > ul.buttons-nav a {
     text-decoration: none;
-    font-size: 30px;
-    font-family: 'Inter', sans-serif;
-    color: #8a8585;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 119.46%;
+    color:#FFFFFF;
+    letter-spacing: -0.04em;
 }
 
-p.presentation {
+/*----------------------
+         3. Presentation
+----------------------*/
+div.presentation {
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+div.presentation p {
     display: flex;
     flex-direction: column;
     margin-top: 1%;
     width: 35%;
     font-size: 25px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 119.46%;
+    letter-spacing: -0.04em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.presentation p span {
+    font-weight: 600;
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+div.presentation p span img {
+    width: 40px;
+    height: 40px;
+    margin-left: 2%;
+}
+
+div.presentation > img {
+    margin-left: 30px;
+    margin-top: 2%;
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+    border-radius: 100px;
 }
 
 
@@ -177,14 +231,6 @@ div.resume a:hover {
 /*----------------------
          5. Contact
 ----------------------*/
-div.contact {
-    height: 200px;
-}
-
-div.contact h4 {
-
-}
-
 
 /*----------------------
          6. Footer
