@@ -1,23 +1,11 @@
-div.presentation > img {
-  border-radius: 100px;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  width: 150px;
+.img-shockwave img {
   border-radius: 100%;
-  background: #FFFFFF;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
-}
-div.presentation > img span {
+  height: 100%;
+  width: 100%;
   position: relative;
   font-size: 72px;
-  top: 5px;
-  left: -5px;
 }
-div.presentation > img::after {
+.img-shockwave::after {
   opacity: 0;
   display: flex;
   flex-direction: row;
@@ -31,7 +19,7 @@ div.presentation > img::after {
   content: "";
   height: 100%;
   width: 100%;
-  border: 8px solid rgba(0, 0, 0, 0.2);
+  border: 8px solid rgba(255, 255, 255, 0.384);
   border-radius: 100%;
   -webkit-animation-name: ripple;
           animation-name: ripple;
@@ -45,7 +33,7 @@ div.presentation > img::after {
           animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
   z-index: -1;
 }
-div.presentation > img::before {
+.img-shockwave::before {
   opacity: 0;
   display: flex;
   flex-direction: row;
@@ -59,7 +47,7 @@ div.presentation > img::before {
   content: "";
   height: 100%;
   width: 100%;
-  border: 8px solid rgba(0, 0, 0, 0.2);
+  border: 8px solid rgba(255, 255, 255, 0.384);
   border-radius: 100%;
   -webkit-animation-name: ripple;
           animation-name: ripple;
@@ -81,7 +69,7 @@ div.presentation > img::before {
   }
   to {
     opacity: 0;
-    transform: scale3d(1.5, 1.5, 1);
+    transform: scale3d(2, 2, 1);
   }
 }
 
@@ -92,6 +80,6 @@ div.presentation > img::before {
   }
   to {
     opacity: 0;
-    transform: scale3d(1.5, 1.5, 1);
+    transform: scale3d(2, 2, 1);
   }
-}/*# sourceMappingURL=test.css.map */
+}/*# sourceMappingURL=ripple.css.map */
