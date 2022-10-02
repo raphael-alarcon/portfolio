@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://api.fontshare.com/v2/css?f[]=satoshi@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter');
 
 /*----------------------
          1. Global
@@ -15,7 +15,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-html {
+body {
     background: no-repeat center center fixed;
     background-color:hsla(0,100%,50%,1);
     background-image:
@@ -30,18 +30,20 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-body {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color:#FFFFFF;
+    background-attachment: fixed;
 }
 
-h2 ~ div {
-    margin-top: 1%;
+div.section-title {
+    background-color: #FFFFFF;
+    padding-left: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -49,6 +51,7 @@ h2 ~ div {
          2. Header
 ----------------------*/
 div.nav {
+    position: relative;
     margin-top: 3%;
     height: 15%;
     width: 90%;
@@ -96,19 +99,24 @@ div.nav > ul.buttons-nav a {
     line-height: 119.46%;
     color:#FFFFFF;
     letter-spacing: -0.04em;
+    transition: letter-spacing 0.3s ease;
+}
+
+div.nav > ul.buttons-nav li > a:hover {
+    color: #EF476F;
+    letter-spacing: 0.1em;
 }
 
 /*----------------------
          3. Presentation
 ----------------------*/
 div.presentation {
-    position: absolute;
-    top: 30%;
+    padding-top: 10%;
     display: flex;
     flex-direction: row;
     width: 80%;
     justify-content: space-evenly;
-    margin-right: 5%;
+    margin-right: 10%;
 }
 
 div.presentation > div {
@@ -117,7 +125,7 @@ div.presentation > div {
 }
 
 div.presentation__text {
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,8 +133,8 @@ div.presentation__text {
 }
 
 div.presentation__text > img {
-    margin-top: 5%;
-    width: 90%;
+    margin-top: 8%;
+    width: 70%;
     height: 100%;
 }
 
@@ -134,7 +142,7 @@ div.presentation p {
     display: flex;
     flex-direction: column;
     margin-top: 1%;
-    width: 70%;
+    width: 60%;
     font-size: 25px;
     font-family: 'Inter';
     font-style: normal;
@@ -155,8 +163,8 @@ div.presentation p span {
 }
 
 div.presentation p span img {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 45px;
     margin-left: 2%;
 }
 
@@ -164,83 +172,65 @@ div.presentation div.img-shockwave {
     position: relative;
     height: 200px;
     width: 200px;
-    margin-top: 2%;
+    margin-top: 1%;
+}
+
+div.presentation div.img-shockwave img {
+    transition: transform 0.5s ease;
+}
+
+div.presentation div.img-shockwave img:hover {
+    transform: scale(1.2);
 }
 
 
 /*----------------------
          3. Work
 ----------------------*/
-@keyframes move_wave {
-    0% {
-        transform: translateX(0) translateZ(0) scaleY(1)
-    }
-    50% {
-        transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-    100% {
-        transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-}
-.waveWrapper {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-}
-.waveWrapperInner {
-    position: absolute;
+div.work {
     width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
-}
-.bgTop {
-    z-index: 15;
-    opacity: 0.5;
-}
-.bgMiddle {
-    z-index: 10;
-    opacity: 0.75;
-}
-.bgBottom {
-    z-index: 5;
-}
-.wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-}
-.waveTop {
-    background-size: 50% 100px;
-}
-.waveAnimation .waveTop {
-  animation: move-wave 3s;
-   -webkit-animation: move-wave 3s;
-   -webkit-animation-delay: 1s;
-   animation-delay: 1s;
-}
-.waveMiddle {
-    background-size: 50% 120px;
-}
-.waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
-}
-.waveBottom {
-    background-size: 50% 100px;
-}
-.waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
 }
 
+div.work svg {
+    margin-bottom: -1%;
+}
+
+div.work div.work__content {
+    height: 1200px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+div.work h2 {
+    font-family: 'Inter';
+    font-size: 45px;
+    color: #2E2E2E;
+}
+
+div.work div.section-title img {
+    width: 125px;
+    margin-top: 0.2%;
+    margin-left: -0.3%;
+}
+
+div.work__grid {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+div.case-study {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin: 100px;
+    height: 400px;
+    width: 300px;
+    background-color: #e6e4e4;
+    border-radius: 40px;
+}
 /*----------------------
          4. Resume
 ----------------------*/
@@ -260,7 +250,7 @@ div.progressbar {
     background: darkgrey;
 }
 
-div.progressbar span#progressbar-content {
+div.progressbar span#progressbar__content {
     border-radius: 0px 30px 30px 0px;
     position: absolute;
     width: 0%;
