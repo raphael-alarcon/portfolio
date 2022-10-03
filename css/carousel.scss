@@ -40,7 +40,7 @@
     }
   
     & > .content {
-      background: $cardBlue;
+      background: $bgBlue;
       border-bottom-left-radius: inherit;
       border-bottom-right-radius: inherit;
       padding: 1em;
@@ -58,7 +58,7 @@
       }
   
       & > h3 {
-        color: #ccc;
+        color: #fff;
         font-size: 0.9rem;
         font-weight: 300;
       }
