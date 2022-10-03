@@ -196,7 +196,7 @@ div.work svg {
 }
 
 div.work div.work__content {
-    height: 1200px;
+    height: 700px;
     background-color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -214,23 +214,7 @@ div.work div.section-title img {
     margin-left: -0.3%;
 }
 
-div.work__grid {
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
 
-div.case-study {
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    margin: 100px;
-    height: 400px;
-    width: 300px;
-    background-color: #e6e4e4;
-    border-radius: 40px;
-}
 /*----------------------
          4. Resume
 ----------------------*/
