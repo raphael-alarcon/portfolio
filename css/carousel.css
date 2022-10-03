@@ -33,17 +33,18 @@
   border-bottom-right-radius: inherit;
   padding: 1em;
   text-align: center;
+  font-family: "Poppins";
 }
 .card > .content > h1, .card > .content > h3 {
   margin: 0.35em 0;
 }
 .card > .content > h1 {
-  color: #fff;
+  color: #2E2E2E;
   font-size: 1.25rem;
   line-height: 1;
 }
 .card > .content > h3 {
-  color: #fff;
+  color: #2E2E2E;
   font-size: 0.9rem;
   font-weight: 300;
 }

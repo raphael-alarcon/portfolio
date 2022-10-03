@@ -45,6 +45,7 @@
       border-bottom-right-radius: inherit;
       padding: 1em;
       text-align: center;
+      font-family: $font;
   
       & > h1,
       & > h3 {
@@ -52,13 +53,13 @@
       }
   
       & > h1 {
-        color: #fff;
+        color: #2E2E2E;
         font-size: 1.25rem;
         line-height: 1;
       }
   
       & > h3 {
-        color: #fff;
+        color: #2E2E2E;
         font-size: 0.9rem;
         font-weight: 300;
       }
