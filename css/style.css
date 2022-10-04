@@ -43,6 +43,9 @@ div.section-title {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Inter';
+    font-size: 30px;
+    margin-bottom: 2%;
 }
 
 
@@ -113,9 +116,15 @@ div.presentation {
     padding-top: 10%;
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 70%;
     justify-content: space-evenly;
     margin-left: 10%;
+}
+
+div.presentation__text {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 div.presentation > div {
@@ -123,18 +132,28 @@ div.presentation > div {
     align-items: center;
 }
 
-div.presentation__text {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+div.presentation__text a {
+    width: 300px;
+    border: solid 2px white;
+    border-radius: 100px;
+    text-align: center;
+    margin-top: auto;
+    font-family: 'Poppins';
+    font-size: 20px;
+    padding: 10px;
+    transition: transform  0.2s ease;
+    margin-right: 33%;
+    display: inline;
+    text-decoration: none;
+    color: white;
 }
 
-div.presentation__text > img {
-    margin-top: 6%;
-    width: 70%;
-    height: 100%;
+div.presentation__text a:hover {
+    transform: scale(1.1);
+    border: solid 2px #EF476F;
+    background-color: #EF476F;
+    backface-visibility: hidden;
+    will-change: transform;
 }
 
 div.presentation p {
@@ -196,15 +215,11 @@ div.work svg {
 
 div.work div.work__content, div.skills {
     color:#2E2E2E;
-    height: 700px;
+    height: 600px;
     background-color: #FFFFFF;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-}
-
-div.work h2 {
-    font-family: 'Inter';
-    font-size: 45px;
 }
 
 div.work div.section-title img {
@@ -220,10 +235,19 @@ div.work__content {
 /*----------------------
          4. Skills
 ----------------------*/
+
+
 div.skills {
     flex-direction: column;
     align-items: center;
 }
+
+div.skills div.section-title img {
+    width: 125px;
+    margin-top: 0.2%;
+}
+
+
 
 /*----------------------
          5. Contact

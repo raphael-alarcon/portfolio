@@ -1,0 +1,86 @@
+div.center-skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 70%;
+}
+
+div.center-skills div svg {
+  height: 125px;
+  transform: rotate(-90deg);
+  width: 125px;
+  position: absolute;
+}
+
+.progress-bar__background {
+  fill: none;
+  stroke: #dadada;
+  stroke-width: 1.8;
+}
+
+.progress-bar__progress {
+  fill: none;
+  stroke: #e2eff0;
+  stroke: #78bec7;
+  stroke-dasharray: 100 100;
+  stroke-dashoffset: 100;
+  stroke-linecap: round;
+  stroke-width: 1.8;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+div.center-skills > div#html img {
+  width: 75px;
+  height: 75px;
+}
+
+div.center-skills > div#javascript img {
+  width: 55px;
+  height: 55px;
+}
+
+div.center-skills > div#css img {
+  width: 50px;
+  height: 75px;
+}
+
+div.center-skills > div#php img {
+  width: 75px;
+  height: 75px;
+}
+
+div.center-skills > div#java img {
+  width: 70px;
+  height: 70px;
+}
+
+div.center-skills > div#c-sharp img {
+  width: 75px;
+  height: 75px;
+}
+
+div.center-skills > div#sql img {
+  width: 85px;
+  height: 85px;
+}
+
+div.center-skills > div#python img {
+  width: 70px;
+  height: 70px;
+}
+
+div.center-skills > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  justify-self: center;
+}
+
+div.center-skills > div h3 {
+  font-family: "Poppins";
+}/*# sourceMappingURL=skills.css.map */
