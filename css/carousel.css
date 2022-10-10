@@ -19,6 +19,7 @@
 }
 
 .card {
+  text-decoration: none;
   border-radius: 0.5em;
 }
 .card > img {

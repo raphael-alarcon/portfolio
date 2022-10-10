@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    --theme_color: #EF476F;
 }
   
 body::-webkit-scrollbar {
@@ -113,23 +114,24 @@ div.nav > ul.buttons-nav li > a:hover {
          3. Presentation
 ----------------------*/
 div.presentation {
-    padding-top: 10%;
+    margin-top: 10%;
     display: flex;
     flex-direction: row;
-    width: 70%;
+    width: 60%;
     justify-content: space-evenly;
     margin-left: 10%;
-}
-
-div.presentation__text {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
 }
 
 div.presentation > div {
     justify-content: center;
     align-items: center;
+}
+
+div.presentation__text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
 }
 
 div.presentation__text a {
@@ -141,8 +143,8 @@ div.presentation__text a {
     font-family: 'Poppins';
     font-size: 20px;
     padding: 10px;
+    margin-top: 5%;
     transition: transform  0.2s ease;
-    margin-right: 33%;
     display: inline;
     text-decoration: none;
     color: white;
@@ -150,8 +152,8 @@ div.presentation__text a {
 
 div.presentation__text a:hover {
     transform: scale(1.1);
-    border: solid 2px #EF476F;
-    background-color: #EF476F;
+    border: solid 2px var(--theme_color);
+    background-color: var(--theme_color);
     backface-visibility: hidden;
     will-change: transform;
 }
@@ -160,7 +162,7 @@ div.presentation p {
     display: flex;
     flex-direction: column;
     margin-top: 1%;
-    width: 60%;
+    width: 100%;
     font-size: 25px;
     font-family: 'Inter';
     font-style: normal;
@@ -181,13 +183,14 @@ div.presentation p span {
 }
 
 div.presentation p span img {
-    width: 46px;
+    width: 47px;
     height: 45px;
     margin-left: 2%;
 }
 
 div.presentation div.img-shockwave {
     position: relative;
+    align-self: center;
     height: 200px;
     width: 200px;
     margin-top: 3%;
@@ -269,9 +272,9 @@ div.progressbar span#progressbar__content {
     position: absolute;
     width: 0%;
     height: 100%;
-    transition: 300ms ease-in-out transform;
+    transition: all 10ms ease-in-out;
     transform-origin: left;
-    background: hsla(22,100%,77%,1);
+    background: var(--theme_color);
 }
 
 

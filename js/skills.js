@@ -23,7 +23,6 @@ var langColor = {
   $.each( langColor, function( language, color) {
       var progressBar = $('#'+language+' .progress-bar__progress');
       progressBar.css("stroke", color);
-      console.log(language);
   });
   
   $.each( langPercentage, function( language, percentageComplete) {
