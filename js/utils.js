@@ -9,6 +9,8 @@ function showResume() {
     scrollBar();
 }
 
+
+
 // Progress bar
 window.onscroll = function() {scrollBar()};
 
@@ -19,6 +21,8 @@ function scrollBar() {
     document.getElementById("progressbar__content").style.width = scrolled + "%";
     if (scrolled >= 99)document.getElementById("progressbar__content").style.width = "101%";
 } 
+
+
 
 
 // Dark mode
@@ -37,14 +41,53 @@ function addDarkmodeWidget() {
 
 window.addEventListener('load', addDarkmodeWidget);
 
+
+// ScrollReveal
 ScrollReveal().reveal('.presentation', {
     delay: 500,
     useDelay: 'onload',
     reset: true,
-})
+});
 
-ScrollReveal().reveal('.work__grid', {
-    delay: 500,
-    useDelay: 'onload',
-    reset: true,
-}) 
+
+// Copy Email
+function copyEmail() {
+  
+     // Copy the text inside the text field
+    navigator.clipboard.writeText("raph.alarcon1@gmail.com");
+  
+    // Alert the copied text
+    alert("Copied the email: raph.alarcon1@gmail.com");
+}
+
+
+
+// Change language
+var flags = {
+    "en": "🇬🇧",
+    "fr": "🇫🇷"
+}
+
+
+function switchLang(lang)
+{
+    $("[data-" + lang + "]").text(function(i, e) {
+        return $(this).data(lang);
+    });
+}
+
+switchLang("en");
+
+$(".switchlang").click(function() {
+    // change the button caption here, eg a flag
+    // UX opinion of whether it should be what it is 
+    // or what it will become
+    // ie "de" click to make it "de"
+    // or "de" it's currently "de", click to change it
+    
+    // switch to other language based on language on the button
+    var lang = $(this).data("lang") == "fr" ? "en" : "fr";
+    $(this).data("lang", lang);
+    $(this).text(flags[lang]);
+    switchLang(lang)
+});

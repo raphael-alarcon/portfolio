@@ -39,14 +39,32 @@ body {
     background-attachment: fixed;
 }
 
-div.section-title {
-    background-color: #FFFFFF;
+.section-title{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    font-family: 'Inter';
+    flex-direction: column;
     font-size: 30px;
-    margin-bottom: 2%;
+    font-family: 'Inter';
+      
+}
+  
+div.section-title h2 {
+    position: relative;
+    z-index: 3;
+}
+  
+div.section-title h2::before {
+    /* Highlight color */
+    background-color: #EF476F;
+  
+    content: "";
+    position: absolute;
+    width: calc(100% + 20px);
+    height: 50%;
+    left: -10px;
+    bottom: 5%;
+    z-index: -1;
 }
 
 
@@ -79,6 +97,10 @@ div.nav div.logo-nav {
     letter-spacing: 0.05em;
 }
 
+div.nav div.logo-nav img {
+    display: none;
+}
+
 div.nav div.logo-nav h1 > span {
     font-family: 'Satoshi';
     font-size: 50px;
@@ -86,14 +108,19 @@ div.nav div.logo-nav h1 > span {
 }
 
 div.nav ul.buttons-nav {
-    width: 27%;
+    width: 35%;
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
-    justify-content: space-between;
     list-style: none;
 }
 
+div.nav > ul > li {
+    margin: 0 3%;
+}
+
 div.nav > ul.buttons-nav a {
+    cursor: pointer;
     text-decoration: none;
     font-family: 'Inter';
     font-style: normal;
@@ -101,13 +128,16 @@ div.nav > ul.buttons-nav a {
     font-weight: 400;
     line-height: 119.46%;
     color:#FFFFFF;
-    letter-spacing: -0.04em;
     transition: letter-spacing 0.3s ease;
 }
 
 div.nav > ul.buttons-nav li > a:hover {
     color: #EF476F;
     letter-spacing: 0.1em;
+}
+
+.switchlang {
+    text-transform: uppercase;
 }
 
 /*----------------------
@@ -135,7 +165,7 @@ div.presentation__text {
 }
 
 div.presentation__text a {
-    width: 300px;
+    width: 80%;
     border: solid 2px white;
     border-radius: 100px;
     text-align: center;
@@ -182,12 +212,6 @@ div.presentation p span {
     margin-bottom: 1%;
 }
 
-div.presentation p span img {
-    width: 47px;
-    height: 45px;
-    margin-left: 2%;
-}
-
 div.presentation div.img-shockwave {
     position: relative;
     align-self: center;
@@ -208,7 +232,7 @@ div.presentation div.img-shockwave img:hover {
 /*----------------------
          3. Work
 ----------------------*/
-div.work, div.skills {
+div.work, div.skills, div.contact {
     width: 100%;
 }
 
@@ -216,7 +240,7 @@ div.work svg {
     margin-bottom: -1%;
 }
 
-div.work div.work__content, div.skills {
+div.work div.work__content, div.skills, div.contact {
     color:#2E2E2E;
     height: 600px;
     background-color: #FFFFFF;
@@ -255,6 +279,51 @@ div.skills div.section-title img {
 /*----------------------
          5. Contact
 ----------------------*/
+div.contact {
+    flex-direction: column;
+    align-items: center;
+}
+
+div.contact ul {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+div.contact ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5% 0;
+    height: 50px;
+    font-size: 30px;
+    font-family: 'Poppins';
+}
+
+.btn-contact {
+    cursor: pointer;
+}
+
+.btn-contact div {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: solid 3px var(--theme_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.btn-contact svg {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s ease;
+    fill: var(--theme_color);
+}
 
 /*----------------------
          6. Footer
@@ -279,9 +348,76 @@ div.progressbar span#progressbar__content {
 
 
 /*----------------------
-         7. Dark Mode
+         7. Media Queries
 ----------------------*/
+@media screen and (max-width: 1024px) {
+
+    div.nav div.logo-nav h1 {
+        display: none;
+    }
+
+    div.nav div.logo-nav img {
+        display: block;
+    }
+    
+    div.nav > ul.buttons-nav {
+        width: 70%;
+    }
+
+    div.presentation {
+        margin: 30% 0;
+        width: 100%;
+        margin-left: 0;
+    }
+}
 
 /*----------------------
-         8. Ripple effect
+         8. Tooltip
 ----------------------*/
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #555;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -75px;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Tooltip arrow */
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }

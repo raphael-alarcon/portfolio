@@ -1,10 +1,8 @@
 div.center-skills {
+  margin-top: 3%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(auto, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  width: 70%;
 }
 
 div.center-skills div svg {
