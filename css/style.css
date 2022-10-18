@@ -74,7 +74,7 @@ div.section-title h2::before {
 div.nav {
     position: relative;
     margin-top: 3%;
-    height: 15%;
+    height: 50px;
     width: 90%;
     display: flex;
     flex-direction: row;
@@ -108,36 +108,43 @@ div.nav div.logo-nav h1 > span {
 }
 
 div.nav ul.buttons-nav {
-    width: 35%;
+    width: 45%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
     list-style: none;
 }
 
-div.nav > ul > li {
-    margin: 0 3%;
+div.nav ul.buttons-nav li, .switchlang {
+    display: flex;
+    align-items: center;
 }
+
 
 div.nav > ul.buttons-nav a {
     cursor: pointer;
     text-decoration: none;
     font-family: 'Inter';
-    font-style: normal;
     font-size: 35px;
     font-weight: 400;
-    line-height: 119.46%;
     color:#FFFFFF;
-    transition: letter-spacing 0.3s ease;
 }
 
-div.nav > ul.buttons-nav li > a:hover {
-    color: #EF476F;
-    letter-spacing: 0.1em;
+div.nav > ul.buttons-nav li {
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
 }
 
-.switchlang {
-    text-transform: uppercase;
+div.nav > ul.buttons-nav li:hover {
+    background-color: rgba(218, 218, 218, 0.25);
+}
+
+.switchlang img {
+    width: 66px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 /*----------------------
@@ -165,7 +172,7 @@ div.presentation__text {
 }
 
 div.presentation__text a {
-    width: 80%;
+    width: 60%;
     border: solid 2px white;
     border-radius: 100px;
     text-align: center;
@@ -350,7 +357,7 @@ div.progressbar span#progressbar__content {
 /*----------------------
          7. Media Queries
 ----------------------*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
 
     div.nav div.logo-nav h1 {
         display: none;
@@ -361,13 +368,131 @@ div.progressbar span#progressbar__content {
     }
     
     div.nav > ul.buttons-nav {
-        width: 70%;
+        width: 80%;
     }
 
     div.presentation {
         margin: 30% 0;
         width: 100%;
         margin-left: 0;
+    }
+      
+}
+
+@media screen and (max-width: 800px) {
+
+    .section-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 15px;
+        font-family: 'Inter';
+          
+    }
+
+
+
+    div.nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    div.nav > ul.buttons-nav {
+        width: 100%;
+    }
+
+    div.nav > ul.buttons-nav a {
+        font-size: 20px;
+    }
+
+    div.logo-nav {
+        display: none !important;
+    }
+
+    .switchlang img {
+        width: 30px;
+        height: 20px;
+    }
+
+    div.nav div.logo-nav img {
+        width: 35px;
+    }
+
+
+    div.presentation {
+        margin-left: 3%;
+        width: 90%;
+    }
+
+    div.presentation p span {
+        font-weight: 500;
+        font-size: 15px;
+        width: 100%;
+    }
+
+    div.presentation__text p {
+        font-size: 12px !important;
+    }
+
+    div.img-shockwave {
+        width: 75px !important;
+        height: 75px !important;
+    }
+
+    div.presentation__text a {
+        width: 80%;
+        border: solid 1px white;
+        border-radius: 100px;
+        text-align: center;
+        margin-top: auto;
+        font-family: 'Poppins';
+        font-size: 10px;
+        padding: 3px 10px;
+        margin-top: 5%;
+    }
+
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    div.work__content, div.skills, div.contact {
+        margin-top: -3px;
+    }
+
+    div.work div.work__content, div.skills, div.contact {
+        height: 300px;
+    }
+
+    div.center {
+        display: none;
+    }
+
+
+
+    div.center-skills {
+        display: none !important;
+    }
+
+    div.contact ul li {
+        font-size: 15px;
+        margin-left: -5%;
+    }
+
+    .btn-contact div {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .btn-contact svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    div.contact ~ svg {
+        margin-top: -2px;
     }
 }
 

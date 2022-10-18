@@ -1,16 +1,3 @@
-// Show/Hide resume
-function showResume() {
-    var x = document.getElementById("resume-pdf");
-    if (x.style.display === "none") {
-        x.style.display = "inline";
-    } else {
-        x.style.display = "none";
-    }
-    scrollBar();
-}
-
-
-
 // Progress bar
 window.onscroll = function() {scrollBar()};
 
@@ -21,26 +8,6 @@ function scrollBar() {
     document.getElementById("progressbar__content").style.width = scrolled + "%";
     if (scrolled >= 99)document.getElementById("progressbar__content").style.width = "101%";
 } 
-
-
-
-
-// Dark mode
-const options = {
-    time: '0.5s', // default: '0.3s'
-    backgroundColor: '#00000',  // default: '#fff'
-    buttonColorDark: '#252422',  // default: '#100f2c'
-    buttonColorLight: '#fff', // default: '#fff'
-    label: '🌓', // default: ''
-    autoMatchOsTheme: true // default: true
-}
-
-function addDarkmodeWidget() {
-    new Darkmode(options).showWidget();
-}
-
-window.addEventListener('load', addDarkmodeWidget);
-
 
 // ScrollReveal
 ScrollReveal().reveal('.presentation', {
@@ -63,11 +30,6 @@ function copyEmail() {
 
 
 // Change language
-var flags = {
-    "en": "🇬🇧",
-    "fr": "🇫🇷"
-}
-
 
 function switchLang(lang)
 {
@@ -88,6 +50,11 @@ $(".switchlang").click(function() {
     // switch to other language based on language on the button
     var lang = $(this).data("lang") == "fr" ? "en" : "fr";
     $(this).data("lang", lang);
-    $(this).text(flags[lang]);
+    $(".switchlang img").attr("src", flags[lang]);
     switchLang(lang)
 });
+
+var flags = {
+    "en": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/800px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png",
+    "fr": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Flag_of_France_%28lighter_variant%29.svg/250px-Flag_of_France_%28lighter_variant%29.svg.png"
+}
