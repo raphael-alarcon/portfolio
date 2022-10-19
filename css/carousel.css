@@ -2,7 +2,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: center;
 }
 
@@ -67,13 +66,15 @@
   height: 1em;
   width: 1em;
 }
+.map > button.active {
+  top: -0.5em;
+}
 .map > button.active:after {
   background: #2E2E2E;
   content: "";
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  top: 50%;
   border-radius: 100%;
   height: 0.5em;
   width: 0.5em;

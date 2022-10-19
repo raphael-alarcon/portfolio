@@ -57,7 +57,6 @@ div.section-title h2 {
 div.section-title h2::before {
     /* Highlight color */
     background-color: #EF476F;
-  
     content: "";
     position: absolute;
     width: calc(100% + 20px);
@@ -157,6 +156,7 @@ div.presentation {
     width: 60%;
     justify-content: space-evenly;
     margin-left: 10%;
+    margin-bottom: 5%;
 }
 
 div.presentation > div {
@@ -243,13 +243,20 @@ div.work, div.skills, div.contact {
     width: 100%;
 }
 
+div.center {
+    scale: 1.1;
+}
+
 div.work svg {
     margin-bottom: -1%;
 }
 
+div.work div.section-title {
+    margin-bottom: 5%;
+}
+
 div.work div.work__content, div.skills, div.contact {
     color:#2E2E2E;
-    height: 600px;
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -260,6 +267,11 @@ div.work div.section-title img {
     width: 125px;
     margin-top: 0.2%;
 }
+
+div.work__content, div.skills, div.contact {
+    padding-bottom: 30%;
+}
+
 
 div.work__content {
     display: flex;
@@ -300,14 +312,23 @@ div.contact ul {
     margin-top: 5%;
 }
 
-div.contact ul li {
+div.contact ul li, div.contact ul li a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 5% 0;
+    margin: 3% 0;
     height: 50px;
     font-size: 30px;
     font-family: 'Poppins';
+    text-decoration: none;
+    color: #2E2E2E;
+    padding: 35px 5px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+div.contact ul li a:hover {
+    background-color: rgba(218, 218, 218, 0.5);
 }
 
 .btn-contact {
@@ -322,7 +343,7 @@ div.contact ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    margin: 0 30px 0 0;
 }
 
 .btn-contact svg {
@@ -357,7 +378,7 @@ div.progressbar span#progressbar__content {
 /*----------------------
          7. Media Queries
 ----------------------*/
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
 
     div.nav div.logo-nav h1 {
         display: none;
@@ -372,9 +393,23 @@ div.progressbar span#progressbar__content {
     }
 
     div.presentation {
-        margin: 30% 0;
+        margin: 15% 0;
         width: 100%;
         margin-left: 0;
+    }
+
+    div.work div.section-title {
+        margin-top: 10%;
+    }
+
+    div.center {
+        margin-top: 3%;
+    }
+
+    div.work div.work__content, div.skills, div.contact {
+        height: auto;
+        justify-content: flex-start;
+        margin-top: -1%;
     }
       
 }
@@ -388,7 +423,6 @@ div.progressbar span#progressbar__content {
         flex-direction: column;
         font-size: 15px;
         font-family: 'Inter';
-          
     }
 
 
@@ -421,18 +455,19 @@ div.progressbar span#progressbar__content {
 
 
     div.presentation {
-        margin-left: 3%;
-        width: 90%;
+        margin: 15% 0;
+        margin-left: 7.5%;
+        width: 100%;
     }
 
     div.presentation p span {
         font-weight: 500;
-        font-size: 15px;
+        font-size: 20px;
         width: 100%;
     }
 
     div.presentation__text p {
-        font-size: 12px !important;
+        font-size: 15px !important;
     }
 
     div.img-shockwave {
@@ -440,8 +475,12 @@ div.progressbar span#progressbar__content {
         height: 75px !important;
     }
 
+    div.presentation__text {
+        width: 60%;
+    }
+
     div.presentation__text a {
-        width: 80%;
+        width: 70%;
         border: solid 1px white;
         border-radius: 100px;
         text-align: center;
@@ -458,23 +497,31 @@ div.progressbar span#progressbar__content {
         height: 100%;
     }
 
-    div.work__content, div.skills, div.contact {
-        margin-top: -3px;
-    }
-
-    div.work div.work__content, div.skills, div.contact {
-        height: 300px;
+    div.work div.section-title {
+        margin-top: 20%;
     }
 
     div.center {
-        display: none;
+        scale: 0.425;
+        margin: -15% 0;
     }
 
 
 
     div.center-skills {
-        display: none !important;
+        grid-template-columns: repeat(3, 0.5fr) !important;
     }
+
+    div.center-skills > div {
+        scale: 0.5;
+    }
+
+    div.center-skills > div {
+        width: 125px !important;
+        height: 100px !important;
+    }
+
+
 
     div.contact ul li {
         font-size: 15px;
@@ -542,7 +589,7 @@ div.progressbar span#progressbar__content {
   }
   
   /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
+  .contact ul li:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
   }
