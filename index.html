@@ -1,395 +1,306 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
-        <link rel="stylesheet" href="css/ripple.css" />
-        <link rel="stylesheet" href="css/carousel.css" />
-        <link rel="stylesheet" href="css/skills.css" />
-        <link rel="icon" href="resources/assets/favicon.png">
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    </head>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/ripple.css" />
+		<link rel="stylesheet" href="css/carousel.css" />
+		<link rel="stylesheet" href="css/skills.css" />
+		<link rel="icon" href="resources/assets/favicon.png" />
+		<script src="https://unpkg.com/scrollreveal"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	</head>
 
-    <body>
-        <div class="nav">
-            <div class="logo-nav">
-                <h1>Raphaël Alarçon<span>.</span></h1>
-                <img src="resources/assets/logo.png" width="50px" alt="logo" />
-            </div>
-            <ul class="buttons-nav">
-                <li><a data-en="Work" data-fr="Projets" href="#work"></a></li>
-                <li><a data-en="Skills" data-fr="Compétences" href="#skills"></a></li>
-                <li><a data-en="Contact" data-fr="Contact" href="#contact"></a></li>
-                <li><a class='switchlang' data-lang="EN"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/800px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png"></a></li>
-            </ul>
-        </div>
-        <div class="presentation">
-            <div class="img-shockwave">
-                <img src="resources/assets/pp.png" alt="self-picture" />
-            </div>
-            <div class="presentation__text">
-                <p>
-                    <span data-en="Hi !" data-fr="Salut !">Hi !</span>
-                    <p data-en="I'm a French student in computer science who's always trying to improve himself." data-fr="Je suis un étudiant en sciences informatiques Français qui essaie toujours de s'améliorer.">
-                    </p>
+	<body>
+		<div class="loader">
+            <script src="https://cdn.lordicon.com/lusqsztk.js"></script>
+            <lord-icon class="icon-loader" src="https://cdn.lordicon.com/nobciafz.json" trigger="loop"
+                colors="primary:#2E2E2E,secondary:#EF476F" style="width:100px;height:100px">
+            </lord-icon>
+			<h2 data-en="Loading..." data-fr="Chargement..."></h2>
+			<div class="loader-base">
+				<div></div>
+			</div>
+		</div>
+
+		<div class="nav">
+			<div class="logo-nav">
+				<h1>Raphaël Alarçon<span>.</span></h1>
+				<img src="resources/assets/logo.png" width="50px" alt="logo" />
+			</div>
+			<ul class="buttons-nav">
+				<li><a data-en="Work" data-fr="Projets" href="#work"></a></li>
+				<li><a data-en="Skills" data-fr="Compétences" href="#skills"></a></li>
+				<li><a data-en="Contact" data-fr="Contact" href="#contact"></a></li>
+				<li>
+					<a class="switchlang" data-lang="EN"
+						><img
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Great_Britain_%281707%E2%80%931800%29.svg/800px-Flag_of_Great_Britain_%281707%E2%80%931800%29.svg.png"
+					/></a>
+				</li>
+			</ul>
+		</div>
+		<div class="presentation">
+			<div class="img-shockwave">
+				<img src="resources/assets/pp.png" alt="self-picture" />
+			</div>
+			<div class="presentation__text">
+				<p>
+					<span data-en="Hi !" data-fr="Salut !">Hi !</span>
+
+				<p
+					data-en="I'm a French student in computer science who's always trying to improve himself."
+					data-fr="Je suis un étudiant en sciences informatiques Français qui essaie toujours de s'améliorer."></p>
+				    <a data-en="Download my resume" data-fr="Télécharger mon CV" href="resources/documents/CV_ALARCON_Raphael.pdf" download></a>
                 </p>
-                <a data-en="Download my resume" data-fr="Télécharger mon CV" href="resources/documents/CV_ALARCON_Raphael.pdf" download></a>
-            </div>
-        </div>
-        <div class="work">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path
-                    fill="#ffffff"
-                    fill-opacity="1"
-                    d="M0,192L80,202.7C160,213,320,235,480,224C640,213,800,171,960,165.3C1120,160,1280,192,1360,208L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-                ></path>
-            </svg>
-            <div class="work__content">
-                <div class="section-title">
-                    <h2 data-en="Work" data-fr="Projets" id="work"></h2>
-                </div>
-                <div class="center">
-                    <div class="wrapper">
-                        <div class="inner">
-                            <a href="resources/documents/Retex_S1.01.pdf" class="card">
-                                    <img
-                                        src="resources/icons/cpdviewer_img.png"
-                                    />
-                                    <div class="content">
-                                        <h1 data-en="Game Development" data-fr="Développement de jeu"></h1>
-                                        <h3>Pong</h3>
-                                    </div>
-                            </a>
-                            <a href="resources/documents/Retex_S1.02.pdf" class="card">
-                                <img
-                                src="resources/icons/lowatem_img.png"
-                                />
-                                <div class="content">
-                                    <h1 data-en="Game Development" data-fr="Développement de jeu"></h1>
-                                    <h3>Lowatem</h3>
-                                </div>
-                            </a>
-                            <a href="resources/documents/Retex_S1.03.pdf" class="card">
-                                <img
-                                    src="resources/icons/virtualmachine_img.png"
-                                />
-                                <div class="content">
-                                    <h1>Configuration</h1>
-                                    <h3 data-en="Virtual Machine" data-fr="Machine Virtuelle"></h3>
-                                </div>
-                            </a>
-                            <a href="resources/documents/Retex_S1.04.pdf" class="card">
-                                <img
-                                    src="resources/icons/database_img.png"
-                                />
-                                <div class="content">
-                                    <h1 data-en="Conception, creation" data-fr="Conception, création">Conception, creation</h1>
-                                    <h3 data-en="Base de données" data-fr="Base de données"></h3>
-                                </div>
-                            </a>
-                            <a href="resources/documents/Retex_S1.05.pdf" class="card">
-                                <img
-                                    src="resources/icons/logiciel_img.png"
-                                />
-                                <div class="content">
-                                    <h1 data-en="Custom website" data-fr="Site web personnalisé">Custom Website</h1>
-                                    <h3>LogiCiel</h3>
-                                </div>
-                            </a>
-                            <a href="resources/documents/Retex_S1.06.pdf" class="card">
-                                <img
-                                    src="resources/icons/logiciel2_img.png"
-                                />
-                                <div class="content">
-                                    <h1>Digital Marketing</h1>
-                                    <h3>LogiCiel</h3>
-                                </div>
-                            </a>
-                            <div class="card">
-                                <img
-                                    src="https://colorlib.com/preview/theme/seogo/img/case_study/1.png"
-                                />
-                                <div class="content">
-                                    <h1>Digital Marketing</h1>
-                                    <h3>UI/UX, Design</h3>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img
-                                    src="https://colorlib.com/preview/theme/seogo/img/case_study/2.png"
-                                />
-                                <div class="content">
-                                    <h1>Digital Marketing</h1>
-                                    <h3>UI/UX, Design</h3>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img
-                                    src="https://colorlib.com/preview/theme/seogo/img/case_study/3.png"
-                                />
-                                <div class="content">
-                                    <h1>Digital Marketing</h1>
-                                    <h3>UI/UX, Design</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+			</div>
+		</div>
+		<div class="work">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+				<path
+					fill="#ffffff"
+					fill-opacity="1"
+					d="M0,192L80,202.7C160,213,320,235,480,224C640,213,800,171,960,165.3C1120,160,1280,192,1360,208L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+			</svg>
+			<div class="work__content">
+				<div class="section-title">
+					<h2 data-en="Work" data-fr="Projets" id="work"></h2>
+				</div>
+				<div class="center">
+					<div class="wrapper">
+						<div class="inner">
+							<a href="resources/documents/Retex_S1.01.pdf" class="card">
+								<img src="resources/icons/cpdviewer_img.png" />
+								<div class="content">
+									<h1 data-en="Game Development" data-fr="Développement de jeu"></h1>
+									<h3>Pong</h3>
+								</div>
+							</a>
+							<a href="resources/documents/Retex_S1.02.pdf" class="card">
+								<img src="resources/icons/lowatem_img.png" />
+								<div class="content">
+									<h1 data-en="Game Development" data-fr="Développement de jeu"></h1>
+									<h3>Lowatem</h3>
+								</div>
+							</a>
+							<a href="resources/documents/Retex_S1.03.pdf" class="card">
+								<img src="resources/icons/virtualmachine_img.png" />
+								<div class="content">
+									<h1>Configuration</h1>
+									<h3 data-en="Virtual Machine" data-fr="Machine Virtuelle"></h3>
+								</div>
+							</a>
+							<a href="resources/documents/Retex_S1.04.pdf" class="card">
+								<img src="resources/icons/database_img.png" />
+								<div class="content">
+									<h1 data-en="Conception, creation" data-fr="Conception, création">Conception, creation</h1>
+									<h3 data-en="Base de données" data-fr="Base de données"></h3>
+								</div>
+							</a>
+							<a href="resources/documents/Retex_S1.05.pdf" class="card">
+								<img src="resources/icons/logiciel_img.png" />
+								<div class="content">
+									<h1 data-en="Custom website" data-fr="Site web personnalisé">Custom Website</h1>
+									<h3>LogiCiel</h3>
+								</div>
+							</a>
+							<a href="resources/documents/Retex_S1.06.pdf" class="card">
+								<img src="resources/icons/logiciel2_img.png" />
+								<div class="content">
+									<h1>Digital Marketing</h1>
+									<h3>LogiCiel</h3>
+								</div>
+							</a>
+							<div class="card">
+								<img src="https://colorlib.com/preview/theme/seogo/img/case_study/1.png" />
+								<div class="content">
+									<h1>Digital Marketing</h1>
+									<h3>UI/UX, Design</h3>
+								</div>
+							</div>
+							<div class="card">
+								<img src="https://colorlib.com/preview/theme/seogo/img/case_study/2.png" />
+								<div class="content">
+									<h1>Digital Marketing</h1>
+									<h3>UI/UX, Design</h3>
+								</div>
+							</div>
+							<div class="card">
+								<img src="https://colorlib.com/preview/theme/seogo/img/case_study/3.png" />
+								<div class="content">
+									<h1>Digital Marketing</h1>
+									<h3>UI/UX, Design</h3>
+								</div>
+							</div>
+						</div>
+					</div>
 
-                    <div class="map">
-                        <button class="active first"></button>
-                        <button class="second"></button>
-                        <button class="third"></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="skills">
-            <div class="section-title">
-                <h2 data-en="Skills" data-fr="Compétences" id="skills"></h2>
-            </div>
-            <div class="center-skills">
-                <div id="html">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png"
-                    />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="-1 -1 34 34"
-                    >
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__background"
-                        />
+					<div class="map">
+						<button class="active first"></button>
+						<button class="second"></button>
+						<button class="third"></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="skills">
+			<div class="section-title">
+				<h2 data-en="Skills" data-fr="Compétences" id="skills"></h2>
+			</div>
+			<div class="center-skills">
+				<div id="html">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" />
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background" />
 
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__progress js-progress-bar"
-                        />
-                    </svg>
-                </div>
-                <div id="css">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png"
-                    />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="-1 -1 34 34"
-                    >
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__background"
-                        />
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__progress js-progress-bar" />
+					</svg>
+				</div>
+				<div id="css">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" />
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background" />
 
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__progress js-progress-bar"
-                        />
-                    </svg>
-                </div>
-                <div id="javascript">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
-                    />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="-1 -1 34 34"
-                    >
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__background"
-                        />
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__progress js-progress-bar" />
+					</svg>
+				</div>
+				<div id="javascript">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" />
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background" />
 
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__progress js-progress-bar"
-                        />
-                    </svg>
-                </div>
-                <div id="php">
-                    <img
-                        src="https://th.bing.com/th/id/R.37335e33aff0709709430ff6f99e02d6?rik=mO6Eo%2fcjgE6Fsw&riu=http%3a%2f%2fpngimg.com%2fuploads%2fphp%2fphp_PNG25.png&ehk=JYk9q5ewu%2bfPpGTpU9BCm9ywg2nCkcMmtbRbw3XmInE%3d&risl=&pid=ImgRaw&r=0"
-                    />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="-1 -1 34 34"
-                    >
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__background"
-                        />
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__progress js-progress-bar" />
+					</svg>
+				</div>
+				<div id="php">
+					<img
+						src="https://th.bing.com/th/id/R.37335e33aff0709709430ff6f99e02d6?rik=mO6Eo%2fcjgE6Fsw&riu=http%3a%2f%2fpngimg.com%2fuploads%2fphp%2fphp_PNG25.png&ehk=JYk9q5ewu%2bfPpGTpU9BCm9ywg2nCkcMmtbRbw3XmInE%3d&risl=&pid=ImgRaw&r=0" />
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background" />
 
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__progress js-progress-bar"
-                        />
-                    </svg>
-                </div>
-                <div id="java">
-                    <img
-                        src="https://cdn-icons-png.flaticon.com/512/226/226777.png"
-                    />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="-1 -1 34 34"
-                    >
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__background"
-                        />
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__progress js-progress-bar" />
+					</svg>
+				</div>
+				<div id="java">
+					<img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" />
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background" />
 
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__progress js-progress-bar"
-                        />
-                    </svg>
-                </div>
-                <div id="c-sharp">
-                    <img
-                        src="https://cdn.cdnlogo.com/logos/c/27/c.svg"
-                    />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="-1 -1 34 34"
-                    >
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__background"
-                        />
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__progress js-progress-bar" />
+					</svg>
+				</div>
+				<div id="c-sharp">
+					<img src="https://cdn.cdnlogo.com/logos/c/27/c.svg" />
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background" />
 
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__progress js-progress-bar"
-                        />
-                    </svg>
-                </div>
-                <div id="sql">
-                    <img
-                        src="https://3wa.fr/wp-content/uploads/2020/04/sql-logo.png"
-                    />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="-1 -1 34 34"
-                    >
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__background"
-                        />
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__progress js-progress-bar" />
+					</svg>
+				</div>
+				<div id="sql">
+					<img src="https://3wa.fr/wp-content/uploads/2020/04/sql-logo.png" />
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background" />
 
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__progress js-progress-bar"
-                        />
-                    </svg>
-                </div>
-                <div id="python">
-                    <img
-                        src="https://www.logolynx.com/images/logolynx/c9/c981cbd34007b6376635105871346a2a.png"
-                    />
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="-1 -1 34 34"
-                    >
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__background"
-                        />
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__progress js-progress-bar" />
+					</svg>
+				</div>
+				<div id="python">
+					<img src="https://www.logolynx.com/images/logolynx/c9/c981cbd34007b6376635105871346a2a.png" />
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 34 34">
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__background" />
 
-                        <circle
-                            cx="16"
-                            cy="16"
-                            r="15.9155"
-                            class="progress-bar__progress js-progress-bar"
-                        />
-                    </svg>
-                </div>
-            </div>
-        </div>
-        <div class="contact">
-            <div class="section-title">
-                <h2 id="contact">Contact</h2>
-            </div>
-            <ul>
-                <li>
-                    <a class="btn-contact" onclick="copyEmail()">
-                        <div class="tooltip">
-                            <span data-en="Copy my email" data-fr="Copier mon e-mail" class="tooltiptext"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 96"><path d="M0 11.283V8a8 8 0 0 1 8-8h112a8 8 0 0 1 8 8v3.283l-64 40zm66.12 48.11a4.004 4.004 0 0 1-4.24 0L0 20.717V88a8 8 0 0 0 8 8h112a8 8 0 0 0 8-8V20.717z" data-name="Layer 2"/></svg>
-                        </div>
-                        raph.alarcon1@gmail.com
-                    </a>
-                </li>
-                <li>
-                    <a class="btn-contact" href="https://github.com/Densetsuuu" target="_blank">
-                        <div class="tooltip">
-                            <span data-en="Visit my GitHub" data-fr="Profil GitHub" class="tooltiptext"></span>
-                            <svg width="2500" height="2432" viewBox="0 0 256 249" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
-                                <path d="M127.505 0C57.095 0 0 57.085 0 127.505c0 56.336 36.534 104.13 87.196 120.99 6.372 1.18 8.712-2.766 8.712-6.134 0-3.04-.119-13.085-.173-23.739-35.473 7.713-42.958-15.044-42.958-15.044-5.8-14.738-14.157-18.656-14.157-18.656-11.568-7.914.872-7.752.872-7.752 12.804.9 19.546 13.14 19.546 13.14 11.372 19.493 29.828 13.857 37.104 10.6 1.144-8.242 4.449-13.866 8.095-17.05-28.32-3.225-58.092-14.158-58.092-63.014 0-13.92 4.981-25.295 13.138-34.224-1.324-3.212-5.688-16.18 1.235-33.743 0 0 10.707-3.427 35.073 13.07 10.17-2.826 21.078-4.242 31.914-4.29 10.836.048 21.752 1.464 31.942 4.29 24.337-16.497 35.029-13.07 35.029-13.07 6.94 17.563 2.574 30.531 1.25 33.743 8.175 8.929 13.122 20.303 13.122 34.224 0 48.972-29.828 59.756-58.22 62.912 4.573 3.957 8.648 11.717 8.648 23.612 0 17.06-.148 30.791-.148 34.991 0 3.393 2.295 7.369 8.759 6.117 50.634-16.879 87.122-64.656 87.122-120.973C255.009 57.085 197.922 0 127.505 0"/>
-                                <path d="M47.755 181.634c-.28.633-1.278.823-2.185.389-.925-.416-1.445-1.28-1.145-1.916.275-.652 1.273-.834 2.196-.396.927.415 1.455 1.287 1.134 1.923M54.027 187.23c-.608.564-1.797.302-2.604-.589-.834-.889-.99-2.077-.373-2.65.627-.563 1.78-.3 2.616.59.834.899.996 2.08.36 2.65M58.33 194.39c-.782.543-2.06.034-2.849-1.1-.781-1.133-.781-2.493.017-3.038.792-.545 2.05-.055 2.85 1.07.78 1.153.78 2.513-.019 3.069M65.606 202.683c-.699.77-2.187.564-3.277-.488-1.114-1.028-1.425-2.487-.724-3.258.707-.772 2.204-.555 3.302.488 1.107 1.026 1.445 2.496.7 3.258M75.01 205.483c-.307.998-1.741 1.452-3.185 1.028-1.442-.437-2.386-1.607-2.095-2.616.3-1.005 1.74-1.478 3.195-1.024 1.44.435 2.386 1.596 2.086 2.612M85.714 206.67c.036 1.052-1.189 1.924-2.705 1.943-1.525.033-2.758-.818-2.774-1.852 0-1.062 1.197-1.926 2.721-1.951 1.516-.03 2.758.815 2.758 1.86M96.228 206.267c.182 1.026-.872 2.08-2.377 2.36-1.48.27-2.85-.363-3.039-1.38-.184-1.052.89-2.105 2.367-2.378 1.508-.262 2.857.355 3.049 1.398"/>
-                            </svg>
-                        </div>
-                        Densetsuuu
-                    </a>
-                </li>
-                <li>
-                    <a class="btn-contact" href="https://linkedin.com/" target="_blank">
-                        <div class="tooltip">
-                            <span data-en="Visit my LinkedIn" data-fr="Profil LinkedIn" class="tooltiptext"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 5 1036 990">
-                                <path d="M0 120c0-33.334 11.667-60.834 35-82.5C58.333 15.833 88.667 5 126 5c36.667 0 66.333 10.666 89 32 23.333 22 35 50.666 35 86 0 32-11.333 58.666-34 80-23.333 22-54 33-92 33h-1c-36.667 0-66.333-11-89-33S0 153.333 0 120zm13 875V327h222v668H13zm345 0h222V622c0-23.334 2.667-41.334 8-54 9.333-22.667 23.5-41.834 42.5-57.5 19-15.667 42.833-23.5 71.5-23.5 74.667 0 112 50.333 112 151v357h222V612c0-98.667-23.333-173.5-70-224.5S857.667 311 781 311c-86 0-153 37-201 111v2h-1l1-2v-95H358c1.333 21.333 2 87.666 2 199 0 111.333-.667 267.666-2 469z"/>
-                            </svg>
-                        </div>
-                        LinkedIn
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path
-                fill="#ffffff"
-                fill-opacity="1"
-                d="M0,192L80,202.7C160,213,320,235,480,224C640,213,800,171,960,165.3C1120,160,1280,192,1360,208L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
-            ></path>
-        </svg>
-        <div class="progressbar">
-            <span id="progressbar__content"></span>
-        </div>
-    </body>
+						<circle cx="16" cy="16" r="15.9155" class="progress-bar__progress js-progress-bar" />
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div class="contact">
+			<div class="section-title">
+				<h2 id="contact">Contact</h2>
+			</div>
+			<ul>
+				<li>
+					<a class="btn-contact" onclick="copyEmail()">
+						<div class="tooltip">
+							<span data-en="Copy my email" data-fr="Copier mon e-mail" class="tooltiptext"></span>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 96">
+								<path
+									d="M0 11.283V8a8 8 0 0 1 8-8h112a8 8 0 0 1 8 8v3.283l-64 40zm66.12 48.11a4.004 4.004 0 0 1-4.24 0L0 20.717V88a8 8 0 0 0 8 8h112a8 8 0 0 0 8-8V20.717z"
+									data-name="Layer 2" />
+							</svg>
+						</div>
+						raph.alarcon1@gmail.com
+					</a>
+				</li>
+				<li>
+					<a class="btn-contact" href="https://github.com/Densetsuuu" target="_blank">
+						<div class="tooltip">
+							<span data-en="Visit my GitHub" data-fr="Profil GitHub" class="tooltiptext"></span>
+							<svg width="2500" height="2432" viewBox="0 0 256 249" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet">
+								<path
+									d="M127.505 0C57.095 0 0 57.085 0 127.505c0 56.336 36.534 104.13 87.196 120.99 6.372 1.18 8.712-2.766 8.712-6.134 0-3.04-.119-13.085-.173-23.739-35.473 7.713-42.958-15.044-42.958-15.044-5.8-14.738-14.157-18.656-14.157-18.656-11.568-7.914.872-7.752.872-7.752 12.804.9 19.546 13.14 19.546 13.14 11.372 19.493 29.828 13.857 37.104 10.6 1.144-8.242 4.449-13.866 8.095-17.05-28.32-3.225-58.092-14.158-58.092-63.014 0-13.92 4.981-25.295 13.138-34.224-1.324-3.212-5.688-16.18 1.235-33.743 0 0 10.707-3.427 35.073 13.07 10.17-2.826 21.078-4.242 31.914-4.29 10.836.048 21.752 1.464 31.942 4.29 24.337-16.497 35.029-13.07 35.029-13.07 6.94 17.563 2.574 30.531 1.25 33.743 8.175 8.929 13.122 20.303 13.122 34.224 0 48.972-29.828 59.756-58.22 62.912 4.573 3.957 8.648 11.717 8.648 23.612 0 17.06-.148 30.791-.148 34.991 0 3.393 2.295 7.369 8.759 6.117 50.634-16.879 87.122-64.656 87.122-120.973C255.009 57.085 197.922 0 127.505 0" />
+								<path
+									d="M47.755 181.634c-.28.633-1.278.823-2.185.389-.925-.416-1.445-1.28-1.145-1.916.275-.652 1.273-.834 2.196-.396.927.415 1.455 1.287 1.134 1.923M54.027 187.23c-.608.564-1.797.302-2.604-.589-.834-.889-.99-2.077-.373-2.65.627-.563 1.78-.3 2.616.59.834.899.996 2.08.36 2.65M58.33 194.39c-.782.543-2.06.034-2.849-1.1-.781-1.133-.781-2.493.017-3.038.792-.545 2.05-.055 2.85 1.07.78 1.153.78 2.513-.019 3.069M65.606 202.683c-.699.77-2.187.564-3.277-.488-1.114-1.028-1.425-2.487-.724-3.258.707-.772 2.204-.555 3.302.488 1.107 1.026 1.445 2.496.7 3.258M75.01 205.483c-.307.998-1.741 1.452-3.185 1.028-1.442-.437-2.386-1.607-2.095-2.616.3-1.005 1.74-1.478 3.195-1.024 1.44.435 2.386 1.596 2.086 2.612M85.714 206.67c.036 1.052-1.189 1.924-2.705 1.943-1.525.033-2.758-.818-2.774-1.852 0-1.062 1.197-1.926 2.721-1.951 1.516-.03 2.758.815 2.758 1.86M96.228 206.267c.182 1.026-.872 2.08-2.377 2.36-1.48.27-2.85-.363-3.039-1.38-.184-1.052.89-2.105 2.367-2.378 1.508-.262 2.857.355 3.049 1.398" />
+							</svg>
+						</div>
+						Densetsuuu
+					</a>
+				</li>
+				<li>
+					<a class="btn-contact" href="https://linkedin.com/" target="_blank">
+						<div class="tooltip">
+							<span data-en="Visit my LinkedIn" data-fr="Profil LinkedIn" class="tooltiptext"></span>
+							<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 5 1036 990">
+								<path
+									d="M0 120c0-33.334 11.667-60.834 35-82.5C58.333 15.833 88.667 5 126 5c36.667 0 66.333 10.666 89 32 23.333 22 35 50.666 35 86 0 32-11.333 58.666-34 80-23.333 22-54 33-92 33h-1c-36.667 0-66.333-11-89-33S0 153.333 0 120zm13 875V327h222v668H13zm345 0h222V622c0-23.334 2.667-41.334 8-54 9.333-22.667 23.5-41.834 42.5-57.5 19-15.667 42.833-23.5 71.5-23.5 74.667 0 112 50.333 112 151v357h222V612c0-98.667-23.333-173.5-70-224.5S857.667 311 781 311c-86 0-153 37-201 111v2h-1l1-2v-95H358c1.333 21.333 2 87.666 2 199 0 111.333-.667 267.666-2 469z" />
+							</svg>
+						</div>
+						LinkedIn
+					</a>
+				</li>
+			</ul>
+		</div>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path
+				fill="#ffffff"
+				fill-opacity="1"
+				d="M0,192L80,202.7C160,213,320,235,480,224C640,213,800,171,960,165.3C1120,160,1280,192,1360,208L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+		</svg>
+		<div class="copyright">
+			<p data-en="Made with" data-fr="Fait avec"></p>
+			<svg
+				version="1.1"
+				fill="white"
+				id="Capa_1"
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				x="0px"
+				y="0px"
+				width="45.743px"
+				height="45.743px"
+				viewBox="0 0 45.743 45.743"
+				style="enable-background: new 0 0 45.743 45.743"
+				xml:space="preserve">
+				<g>
+					<path
+						d="M34.199,3.83c-3.944,0-7.428,1.98-9.51,4.997c0,0-0.703,1.052-1.818,1.052c-1.114,0-1.817-1.052-1.817-1.052
+                        c-2.083-3.017-5.565-4.997-9.51-4.997C5.168,3.83,0,8.998,0,15.376c0,1.506,0.296,2.939,0.82,4.258
+                        c3.234,10.042,17.698,21.848,22.051,22.279c4.354-0.431,18.816-12.237,22.052-22.279c0.524-1.318,0.82-2.752,0.82-4.258
+                        C45.743,8.998,40.575,3.83,34.199,3.83z" />
+				</g>
+			</svg>
+			<p data-en="by Raphaël" data-fr="par Raphaël"></p>
+		</div>
+		<div class="progressbar">
+			<span id="progressbar__content"></span>
+		</div>
+	</body>
 
-    <script src="js/utils.js"></script>
-    <script src="js/carousel.js"></script>
-    <script src="js/skills.js"></script>
+	<script src="js/utils.js"></script>
+	<script src="js/carousel.js"></script>
+	<script src="js/skills.js"></script>
 </html>

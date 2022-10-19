@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter');
 
 /*----------------------
@@ -10,6 +10,10 @@
     padding: 0;
     box-sizing: border-box;
     --theme_color: #EF476F;
+}
+
+html {
+    scroll-behavior: smooth;
 }
   
 body::-webkit-scrollbar {
@@ -150,13 +154,13 @@ div.nav > ul.buttons-nav li:hover {
          3. Presentation
 ----------------------*/
 div.presentation {
-    margin-top: 10%;
+    margin-top: 9%;
     display: flex;
     flex-direction: row;
     width: 60%;
     justify-content: space-evenly;
     margin-left: 10%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 div.presentation > div {
@@ -356,6 +360,28 @@ div.contact ul li a:hover {
 /*----------------------
          6. Footer
 ----------------------*/
+div.copyright {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5%;
+    margin-bottom: 2%;
+    width: 40%;
+    font-family: 'Satoshi';
+    font-size: 30px;
+    font-weight: 500;
+}
+
+div.copyright > * {
+    margin: 0 5px;
+}
+
+div.copyright svg {
+    width: 35px;
+    height: 35px;
+}
+
 div.progressbar {
     position: fixed;
     bottom: 0;
@@ -522,7 +548,6 @@ div.progressbar span#progressbar__content {
     }
 
 
-
     div.contact ul li {
         font-size: 15px;
         margin-left: -5%;
@@ -593,3 +618,40 @@ div.progressbar span#progressbar__content {
     visibility: visible;
     opacity: 1;
   }
+
+/*----------------------
+         9. Loader
+----------------------*/
+.loader {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    color: #2E2E2E;
+    transition: opacity 0.5s ease-in-out;
+    font-family: 'Inter';
+}
+
+.loader-base {
+  width: 30%;
+  height: 5px;
+  background: #DCDCDC;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.loader-base div {
+  z-index: 2;
+  background: var(--theme_color);;
+  width: 0%;
+  height: 100%;
+  border-radius: 10px;
+}
