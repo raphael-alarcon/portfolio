@@ -61,7 +61,7 @@ function loading() {
     $(".loader-base div").css("width",0);
     myInterval = setInterval( () => {
       moveLoading();
-    }, 20);
+    }, 5);
 }
 
 function moveLoading() {
