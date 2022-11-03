@@ -28,7 +28,7 @@ function switchLang(lang)
     });
 }
 
-switchLang("en");
+switchLang("fr");
 
 $(".switchlang").click(function() {
     loading();
