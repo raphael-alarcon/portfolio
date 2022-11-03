@@ -548,6 +548,10 @@ div.progressbar span#progressbar__content {
     }
 
 
+    div.contact ul {
+        scale: 0.7;
+    }
+
     div.contact ul li {
         font-size: 15px;
         margin-left: -5%;
