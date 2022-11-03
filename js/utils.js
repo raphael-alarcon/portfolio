@@ -35,6 +35,7 @@ $(".switchlang").click(function() {
     var lang = $(this).data("lang") == "fr" ? "en" : "fr";
     $(this).data("lang", lang);
     $(".switchlang img").attr("src", flags[lang]);
+    $(".presentation__text p a").attr("href", "resources/documents/CV_ALARCON_Raphael_" + lang.toUpperCase() + ".pdf");
     switchLang(lang);
 });
 
