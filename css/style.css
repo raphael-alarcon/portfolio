@@ -157,9 +157,9 @@ div.presentation {
     margin-top: 9%;
     display: flex;
     flex-direction: row;
-    width: 60%;
+    width: 80%;
     justify-content: space-evenly;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-bottom: 3%;
 }
 
@@ -451,11 +451,9 @@ div.progressbar span#progressbar__content {
         font-family: 'Inter';
     }
 
-
-
     div.nav {
         justify-content: center;
-        width: 100%;
+        width: 90%;
     }
 
     div.nav > ul.buttons-nav {
@@ -482,41 +480,45 @@ div.progressbar span#progressbar__content {
 
     div.presentation {
         margin: 15% 0;
-        margin-left: 7.5%;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
+        gap: 3em;
+    }
+
+    div.presentation > p {
+        margin: 1% 0;
     }
 
     div.presentation p span {
         font-weight: 500;
-        font-size: 20px;
+        font-size: 1.5em;
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     div.presentation__text p {
-        font-size: 15px !important;
+        font-size: 1.5em;
+        text-align: center;
     }
 
     div.img-shockwave {
-        width: 75px !important;
-        height: 75px !important;
+        width: 9em !important;
+        height: 9em !important;
     }
 
     div.presentation__text {
-        width: 60%;
+        width: 80%;
+        align-items: center !important;
+        justify-content: center;
     }
 
     div.presentation__text a {
-        width: 70%;
-        border: solid 1px white;
-        border-radius: 100px;
-        text-align: center;
-        margin-top: auto;
-        font-family: 'Poppins';
-        font-size: 10px;
-        padding: 3px 10px;
-        margin-top: 5%;
+        font-size: 1.2em;
+        width: 50%;
+        padding: 7px;
     }
-
 
     svg {
         width: 100%;
@@ -528,7 +530,7 @@ div.progressbar span#progressbar__content {
     }
 
     div.center {
-        scale: 0.425;
+        scale: 0.55;
         margin: -15% 0;
     }
 
@@ -553,22 +555,33 @@ div.progressbar span#progressbar__content {
     }
 
     div.contact ul li {
-        font-size: 15px;
+        font-size: 35px;
         margin-left: -5%;
     }
 
     .btn-contact div {
-        width: 45px;
-        height: 45px;
+        width: 2.5em;
+        height: 2.5em;
     }
     
     .btn-contact svg {
-        width: 15px;
-        height: 15px;
+        width: 1em;
+        height: 1em;
     }
 
     div.contact ~ svg {
         margin-top: -2px;
+    }
+
+    div.copyright {
+        margin-bottom: 3%;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    div.copyright svg {
+        width: 25px;
+        height: 25px;
     }
 }
 

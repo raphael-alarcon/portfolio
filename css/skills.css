@@ -10,6 +10,7 @@ div.center-skills div svg {
   transform: rotate(-90deg);
   width: 125px;
   position: absolute;
+  opacity: 0;
 }
 
 .progress-bar__background {
